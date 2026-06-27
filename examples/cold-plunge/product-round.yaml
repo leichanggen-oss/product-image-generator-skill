@@ -1,0 +1,177 @@
+output_dir: outputs/cold-plunge-round
+
+api:
+  model: gpt-image-2
+  quality: medium
+  size: 1536x1024
+  output_format: webp
+  output_compression: 85
+
+product:
+  product_name: 1 HP Cold Plunge Chiller System
+  sku: cold-plunge-round-1hp
+  variant: round black insulated tub with separate black 1 HP chiller
+  market: United States
+  language: English
+  description: >-
+    A black insulated round cold-plunge tub paired with a separate black rectangular
+    1 HP water chiller. The chiller has a large circular front cooling fan, a small
+    top control panel, two recessed top handles, side heat-exchanger fins, a transparent
+    filter canister, water inlet/outlet ports, visible fasteners, cables, hoses, and caster wheels.
+  preserve:
+    - black powder-coated rectangular chiller housing with sloped upper front section
+    - one large circular front cooling fan with black grille and crossed support bars
+    - small rectangular control panel centered on the sloped upper face
+    - two recessed carrying handles on the top panel
+    - blue heat-exchanger fins visible on the side
+    - transparent side filter canister and the real inlet/outlet port locations
+    - visible silver fasteners, black cable, black hoses, feet, and caster wheels
+    - black round insulated tub with its real proportions, texture, rim, handles, and valves
+    - exact relationship between the separate tub and separate chiller
+  forbid:
+    - changing the machine into an integrated all-in-one tub
+    - changing the round tub into an oval tub
+    - changing fan count, grille geometry, button layout, housing shape, ports, filter, handles, screws, or wheels
+    - inventing a brand name, redesigning labels, or adding readable AI-generated text
+    - hiding the chiller behind the tub when the scene is intended to show the complete system
+  verified_features:
+    - separate water chiller and insulated cold-plunge tub
+    - removable or transportable chiller with top handles and caster wheels
+    - visible water filter canister
+    - digital control panel
+    - large cooling fan and side heat-exchanger fins
+  prohibited_claims:
+    - smartphone app control
+    - Wi-Fi or Bluetooth control
+    - UV, ozone, or automatic sanitation unless separately verified
+    - exact cooling time, minimum temperature, power consumption, medical benefits, or certifications
+
+default_references:
+  - references/chiller-front.jpg
+  - references/chiller-angle.jpg
+  - references/product-size-reference.jpg
+  - references/scene-reference-01.jpg
+
+visual_direction:
+  - premium wellness brand photography similar in restraint to a high-end direct-to-consumer recovery brand
+  - cold white, soft gray, charcoal black, and restrained ice-blue accents
+  - clean architectural space, large negative space, minimal props, no supplier-style banners
+  - realistic commercial photography, 35-50 mm lens look, controlled highlights on black metal and vinyl
+  - no text inside AI-generated scenes
+
+scenes:
+  - id: 01_hero
+    kind: ai
+    filename: 01_hero.webp
+    title: Complete Cold Plunge System
+    prompt: >-
+      Premium hero photograph of the exact black round cold-plunge tub and exact separate 1 HP chiller
+      arranged as a complete system on a seamless pale-gray studio floor. Three-quarter front camera angle,
+      tub dominant on the left and chiller clearly visible on the right, credible hoses routed between them,
+      subtle cold-water surface and a very small amount of ice, soft overhead daylight, refined contact shadows,
+      generous negative space above and to the left for website copy.
+
+  - id: 02_studio_front
+    kind: ai
+    filename: 02_studio_front.webp
+    references:
+      - references/chiller-front.jpg
+      - references/chiller-angle.jpg
+    title: Chiller Front View
+    prompt: >-
+      Exact chiller only, front-facing commercial catalog photograph on a seamless off-white background.
+      Camera centered at fan height. Preserve the front fan, control panel, top handles, cabinet edges,
+      screws, cable, wheels, proportions, and matte-black finish. No tub, no props, no text.
+
+  - id: 03_studio_angle
+    kind: ai
+    filename: 03_studio_angle.webp
+    references:
+      - references/chiller-angle.jpg
+      - references/chiller-front.jpg
+    title: Chiller Three-Quarter View
+    prompt: >-
+      Exact chiller only in a clean three-quarter front-right catalog view on a seamless cool-white background.
+      Keep the transparent filter canister, water ports, front fan, top controls, handles, side panels,
+      fasteners, cable, and wheels visible and unchanged. Soft studio lighting and realistic floor shadow.
+
+  - id: 04_complete_system
+    kind: ai
+    filename: 04_complete_system.webp
+    title: What's Included
+    prompt: >-
+      Clean complete-system photograph showing the exact round tub and exact separate chiller fully visible,
+      with only the real connecting hoses and power cable. Arrange every component with honest scale on a
+      bright neutral studio floor. Slightly elevated three-quarter angle, clear spacing between components,
+      no exploded view, no duplicate accessories, no labels, no text.
+
+  - id: 05_bathroom
+    kind: ai
+    filename: 05_bathroom.webp
+    title: Home Bathroom Setup
+    prompt: >-
+      Install the exact round tub and exact chiller in a premium modern shower room with large pale stone tiles,
+      brushed stainless fixtures, a nearby floor drain, and diffused daylight. Keep the chiller in a dry,
+      ventilated position beside the tub. No person. Show realistic hose routing, scale, reflections, and clearance.
+
+  - id: 06_home_gym
+    kind: ai
+    filename: 06_home_gym.webp
+    title: Post-Workout Recovery
+    prompt: >-
+      Exact round tub and exact chiller in an upscale home gym recovery area with muted rubber flooring,
+      a bench and minimal strength equipment softly out of focus. One fit adult user seated naturally in the tub,
+      shoulders above the water, without blocking the round tub shape or chiller. Cool morning light, believable anatomy,
+      credible water displacement, no excessive ice, no fitness-ad styling.
+
+  - id: 07_outdoor
+    kind: ai
+    filename: 07_outdoor.webp
+    title: Outdoor Recovery
+    prompt: >-
+      Exact round tub and exact chiller on a covered modern patio beside a landscaped lake-house or pool area.
+      Keep the electrical chiller protected from direct rain and placed on a stable dry surface. Late-morning natural
+      light, realistic greenery, restrained luxury, complete product visibility, correct hose connections and scale.
+
+  - id: 08_wellness
+    kind: ai
+    filename: 08_wellness.webp
+    title: Wellness Club
+    prompt: >-
+      Exact round tub and exact chiller in a refined hotel spa or wellness-club recovery suite with warm wood,
+      pale stone, indirect lighting, folded towels, and minimal decor. No person. Product remains the visual focus,
+      with the chiller clearly ventilated and not hidden. Premium architectural photography with cool product highlights.
+
+  - id: 09_filter_detail
+    kind: detail_card
+    filename: 09_filter_detail.png
+    source: references/chiller-angle.jpg
+    crop: [360, 90, 800, 720]
+    title: Water Filter
+    body: The transparent filter canister is kept visible for inspection and routine maintenance.
+
+  - id: 10_cooling_detail
+    kind: detail_card
+    filename: 10_cooling_detail.png
+    source: references/chiller-front.jpg
+    crop: [90, 170, 710, 760]
+    title: Cooling Fan
+    body: A large front fan and side heat-exchanger area support airflow through the chiller cabinet.
+
+  - id: 11_control_panel
+    kind: detail_card
+    filename: 11_control_panel.png
+    source: references/chiller-front.jpg
+    crop: [210, 25, 590, 300]
+    title: Control Panel
+    body: The top-mounted digital control panel keeps primary operation controls within easy reach.
+
+  - id: 12_dimensions
+    kind: dimensions
+    filename: 12_dimensions.png
+    source: references/chiller-angle.jpg
+    title: Chiller Dimensions
+    dimensions:
+      width_mm: 470
+      depth_mm: 520
+      height_mm: 630
