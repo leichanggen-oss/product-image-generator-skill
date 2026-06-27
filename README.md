@@ -2,7 +2,7 @@
 
 A Codex/agent skill plus a runnable Python batch generator for ecommerce and independent-store product images.
 
-It takes real product references and produces multiple **separate** assets in one run. The included cold-plunge example is configured for a 1 HP chiller and an oval tub.
+It takes real product references and produces multiple **separate** assets in one run. The included cold-plunge example is configured for a 1 HP chiller with separate oval and round tub variants.
 
 ## What it generates
 
@@ -40,7 +40,11 @@ source .venv/bin/activate
 pip install -e .
 ```
 
-### 2. Set the API key
+### 2. Add product references
+
+Place your own images in `examples/cold-plunge/references/` using the filenames documented in that folder. Product images are intentionally not committed to the public repository.
+
+### 3. Set the API key
 
 ```bash
 # Windows PowerShell
@@ -50,7 +54,7 @@ $env:OPENAI_API_KEY="your-key"
 export OPENAI_API_KEY="your-key"
 ```
 
-### 3. Generate the complete set
+### 4. Generate the complete set
 
 ```bash
 python scripts/generate.py examples/cold-plunge/product-oval.yaml
@@ -109,4 +113,4 @@ Use the repository directly in a Codex project, or copy the root folder to your 
 
 ## License
 
-MIT. The example reference images remain the property of their owner and are included only as user-provided project inputs.
+The source code is MIT licensed. Product photographs and supplier assets are not included; use only images that you own or are authorized to use.
