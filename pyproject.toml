@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "product-image-generator-skill"
+version = "1.0.0"
+description = "Batch ecommerce product image generator with strict product-reference locking"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "leichanggen-oss"}]
+dependencies = [
+  "openai>=2.0.0",
+  "Pillow>=10.0.0",
+  "PyYAML>=6.0.1",
+  "pydantic>=2.7.0",
+  "tenacity>=8.2.3",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0.0", "ruff>=0.5.0"]
+
+[project.scripts]
+product-image-generator = "product_image_skill.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
